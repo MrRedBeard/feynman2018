@@ -13,13 +13,13 @@
  */
 
 ?>
+</div><!-- /.row -->
 </div><!--/Page Content End -->
 
 <footer class="footer">
 	<div class="container">
 		<p class="pull-right"><a href="#">Back to top</a></p>
 		<p class="text-muted">&copy; 2017 Company, LLC. &middot;</p>
-		<?php wp_footer(); ?>
 	</div>
 </footer>
 
@@ -33,6 +33,6 @@
 <script src="<?php echo get_bloginfo('template_directory'); ?>/js/ie10-viewport-bug-workaround.js"></script>
 
 
-
+<?php wp_footer(); ?>
 </body>
 </html>

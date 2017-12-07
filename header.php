@@ -55,31 +55,13 @@
 		<span class="icon-bar"></span>
 		<span class="icon-bar"></span>
 	  </button>
-	  <a class="navbar-brand" href="/">Page Title</a>
+	  <a class="navbar-brand" href="<?php echo get_bloginfo( 'wpurl' ); ?>"><?php echo get_bloginfo( 'name' ); ?></a>
+	  <?php echo get_bloginfo( 'description' ); ?>
 	</div>
 	<div id="navbar" class="collapse navbar-collapse">
 	  <ul class="nav navbar-nav">
 		<li class="active"><a href="/">Home</a></li>
-		<li><a href="/Home/Carousel">Carousel</a></li>
-		<li><a href="/Home/Carousel2">Carousel2</a></li>
-		<li><a href="/Home/Blog">Blog</a></li>
-		<li><a href="/Home/BlogLatest">Blog Latest</a></li>
-		<li><a href="/Home/SignIn">SignIn</a></li>
-		<li><a href="/Home/Examples">Examples</a></li>
-		<li><a href="/Home/GridsExample">Grids</a></li>
-		<li><a href="/Home/MarketingLandingExample">Marketing Landing Page</a></li>
-		<li class="dropdown">
-		  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-		  <ul class="dropdown-menu">
-			<li><a href="/Home/Dashboard">Dashboard</a></li>
-			<li><a href="#">Another action</a></li>
-			<li><a href="#">Something else here</a></li>
-			<li role="separator" class="divider"></li>
-			<li class="dropdown-header">Nav header</li>
-			<li><a href="#">Separated link</a></li>
-			<li><a href="#">One more separated link</a></li>
-		  </ul>
-		</li>
+		<?php wp_list_pages( '&title_li=' ); ?>
 	  </ul>
 	</div><!--/.nav-collapse -->
   </div>
