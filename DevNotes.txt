@@ -1,0 +1,3 @@
+Resources for how WordPress themes work
+https://codex.wordpress.org/Theme_Development
+https://www.taniarascia.com/developing-a-wordpress-theme-from-scratch/#custom

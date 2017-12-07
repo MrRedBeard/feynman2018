@@ -24,7 +24,6 @@
 	<meta name="author" content="">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="icon" href="/favicon.ico">
-	<title>Empty Page</title>
 
 	<!-- Bootstrap -->
 	<link href="<?php echo get_bloginfo('template_directory'); ?>/css/bootstrap.min.css" rel="stylesheet">

@@ -18,6 +18,9 @@ if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '<' ) )
 	return;
 }
 
+add_theme_support( 'title-tag' );
+add_theme_support( 'post-thumbnails' );
+
 // Add scripts and stylesheets
 function x2feynman_scripts() 
 {
@@ -32,3 +35,12 @@ function x2feynman_scripts()
 }
 
 add_action( 'wp_enqueue_scripts', 'x2feynman_scripts' );
+
+// Add Google Fonts
+function x2feynman_google_fonts() 
+{
+	wp_register_style('OpenSans', 'http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
+	wp_enqueue_style( 'OpenSans');
+}
+
+add_action('wp_print_styles', 'x2feynman_google_fonts');
