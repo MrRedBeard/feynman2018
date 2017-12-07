@@ -56,7 +56,6 @@
 		<span class="icon-bar"></span>
 	  </button>
 	  <a class="navbar-brand" href="<?php echo get_bloginfo( 'wpurl' ); ?>"><?php echo get_bloginfo( 'name' ); ?></a>
-	  <?php echo get_bloginfo( 'description' ); ?>
 	</div>
 	<div id="navbar" class="collapse navbar-collapse">
 	  <ul class="nav navbar-nav">
@@ -68,4 +67,8 @@
 </nav>
 
 <div class="container"><!--/Page Content Start -->
-	
+
+	<div class="blog-header">
+		<h1 class="blog-title"><a href="<?php echo get_bloginfo( 'wpurl' );?>"><?php echo get_bloginfo( 'name' ); ?></a></h1>
+		<p class="lead blog-description"><?php echo get_bloginfo( 'description' ); ?></p>
+	</div>

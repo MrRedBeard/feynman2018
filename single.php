@@ -1,6 +1,6 @@
 <?php
 /**
- * The main template file
+ * The single page template file
  *
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
@@ -17,16 +17,20 @@
 
 ?>
 
-<?php get_header(); ?>
+<?php get_header(); ?>	  
 
 <div class="row">
-	<div class="col-sm-8 blog-main">
+	<div class="col-sm-12 blog-main">
 	
 		
 		<?php 
 			if ( have_posts() ) : while ( have_posts() ) : the_post();
   	
 				get_template_part( 'content', get_post_format() );
+				
+				if ( comments_open() || get_comments_number() ) :
+					comments_template();
+				endif;
   
 			endwhile; endif; 
 		?>
@@ -35,5 +39,4 @@
 		
 	</div><!-- /.blog-main -->
 	
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

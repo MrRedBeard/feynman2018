@@ -1,6 +1,6 @@
 <?php
 /**
- * The main template file
+ * The page template file
  *
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
@@ -18,9 +18,10 @@
 ?>
 
 <?php get_header(); ?>
+	  
 
 <div class="row">
-	<div class="col-sm-8 blog-main">
+	<div class="col-sm-12 blog-main">
 	
 		
 		<?php 
@@ -35,5 +36,4 @@
 		
 	</div><!-- /.blog-main -->
 	
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
