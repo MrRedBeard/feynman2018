@@ -26,12 +26,7 @@
 	<link rel="icon" href="/favicon.ico">
 
 	<!-- Bootstrap -->
-	<link href="<?php echo get_bloginfo('template_directory'); ?>/css/bootstrap.min.css" rel="stylesheet">
-	<link href="<?php echo get_bloginfo('template_directory'); ?>/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-	<link href="<?php echo get_bloginfo('template_directory'); ?>/css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="<?php echo get_bloginfo('template_directory'); ?>/css/theme.css" rel="stylesheet">
-	<link href="<?php echo get_bloginfo('template_directory'); ?>/css/style.css" rel="stylesheet">
-	<link href="<?php echo get_bloginfo('template_directory'); ?>/css/font-awesome.css" rel="stylesheet">
+	
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -39,7 +34,6 @@
 	  <script src="<?php echo get_bloginfo('template_directory'); ?>/js/html5shiv.min.js"></script><!--3.7.3-->
 	  <script src="<?php echo get_bloginfo('template_directory'); ?>/js/respond.min.js"></script><!--1.4.2-->
 	<![endif]-->
-	  <script src="<?php echo get_bloginfo('template_directory'); ?>/js/ie-emulation-modes-warning.js"></script>
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>

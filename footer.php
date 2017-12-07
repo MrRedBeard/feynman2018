@@ -26,11 +26,7 @@
 
 
 <!-- Bootstrap core JavaScript -->
-<script src="<?php echo get_bloginfo('template_directory'); ?>/js/jquery.min.js"></script><!--1.12.4-->
-<script src="<?php echo get_bloginfo('template_directory'); ?>/js/bootstrap.min.js"></script>
-<script src="<?php echo get_bloginfo('template_directory'); ?>/js/docs.min.js"></script>
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="<?php echo get_bloginfo('template_directory'); ?>/js/ie10-viewport-bug-workaround.js"></script>
+
 
 
 <?php wp_footer(); ?>
