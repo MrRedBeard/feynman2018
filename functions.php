@@ -20,6 +20,47 @@ if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '<' ) )
 
 add_theme_support( 'title-tag' );
 add_theme_support( 'post-thumbnails' );
+add_theme_support( 'html5', array( 'search-form' ) );
+
+/**
+ * Hide WordPress Updates from all but Admins
+ */
+function hide_update_notice_to_all_but_admin()
+{
+	if ( !current_user_can( 'update_core' ) ) 
+	{
+		remove_action( 'admin_notices', 'update_nag', 3 );
+	}
+}
+add_action( 'admin_head', 'hide_update_notice_to_all_but_admin', 1 );
+
+/** 
+ * Include navigation menu editor
+ */
+function register_my_menu() 
+{
+  register_nav_menu('nav-menu',__( 'Navigation Menu' ));
+}
+add_action( 'init', 'register_my_menu' );
+
+/**
+ * Add Categories for Attachments
+ */
+function add_categories_for_attachments() 
+{
+	register_taxonomy_for_object_type( 'category', 'attachment' );
+}
+add_action( 'init' , 'add_categories_for_attachments' );
+
+/**
+ * Add Tags for Attachments
+ */
+function add_tags_for_attachments()
+{
+	register_taxonomy_for_object_type( 'post_tag', 'attachment' );
+}
+add_action( 'init' , 'add_tags_for_attachments' );
+
 
 // Add scripts and stylesheets
 function x2feynman_scripts() 
