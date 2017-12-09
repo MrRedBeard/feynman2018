@@ -15,7 +15,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php
 	if ( is_sticky() && is_home() ) :
-		echo twentyseventeen_get_svg( array( 'icon' => 'thumb-tack' ) );
+		//echo twentyseventeen_get_svg( array( 'icon' => 'thumb-tack' ) );
 	endif;
 	?>
 	<header class="entry-header">
@@ -23,10 +23,10 @@
 		if ( 'post' === get_post_type() ) {
 			echo '<div class="entry-meta">';
 				if ( is_single() ) {
-					twentyseventeen_posted_on();
+					//twentyseventeen_posted_on();
 				} else {
-					echo twentyseventeen_time_link();
-					twentyseventeen_edit_link();
+					//echo twentyseventeen_time_link();
+					//twentyseventeen_edit_link();
 				};
 			echo '</div><!-- .entry-meta -->';
 		};
@@ -44,7 +44,7 @@
 	<?php if ( '' !== get_the_post_thumbnail() && ! is_single() ) : ?>
 		<div class="post-thumbnail">
 			<a href="<?php the_permalink(); ?>">
-				<?php the_post_thumbnail( 'twentyseventeen-featured-image' ); ?>
+				<?php //the_post_thumbnail( 'twentyseventeen-featured-image' ); ?>
 			</a>
 		</div><!-- .post-thumbnail -->
 	<?php endif; ?>
@@ -68,7 +68,7 @@
 
 	<?php
 	if ( is_single() ) {
-		twentyseventeen_entry_footer();
+		//twentyseventeen_entry_footer();
 	}
 	?>
 

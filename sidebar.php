@@ -15,6 +15,9 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 }
 ?>
 
-<aside id="secondary" class="widget-area" role="complementary" aria-label="<?php esc_attr_e( 'Blog Sidebar', 'twentyseventeen' ); ?>">
+<div id="sidebar" role="complementary" class="col-sm-3 col-sm-offset-1 blog-sidebar widget-area" aria-label="<?php esc_attr_e( 'Blog Sidebar', 'twentyseventeen' ); ?>>
+
+
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
-</aside><!-- #secondary -->
+
+</div> <!-- Sidebar -->

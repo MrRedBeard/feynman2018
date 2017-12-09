@@ -17,7 +17,19 @@
 
 get_header(); ?>
 
-<div class="wrap">
+
+<div class="row">
+<?php 
+	if ( is_active_sidebar( 'sidebar-1' ) )
+	{
+		?><div class="col-sm-8 blog-main"> <?php
+	}
+	else
+	{
+		?> <div class="col-sm-12 blog-main"> <?php
+	}
+?>
+	
 	<?php if ( is_home() && ! is_front_page() ) : ?>
 		<header class="page-header">
 			<h1 class="page-title"><?php single_post_title(); ?></h1>
@@ -28,8 +40,6 @@ get_header(); ?>
 	</header>
 	<?php endif; ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
 
 			<?php
 			if ( have_posts() ) :
@@ -46,11 +56,11 @@ get_header(); ?>
 
 				endwhile;
 
-				the_posts_pagination( array(
-					'prev_text' => twentyseventeen_get_svg( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">' . __( 'Previous page', 'twentyseventeen' ) . '</span>',
-					'next_text' => '<span class="screen-reader-text">' . __( 'Next page', 'twentyseventeen' ) . '</span>' . twentyseventeen_get_svg( array( 'icon' => 'arrow-right' ) ),
-					'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentyseventeen' ) . ' </span>',
-				) );
+				//the_posts_pagination( array(
+				//	'prev_text' => twentyseventeen_get_svg( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">' . __( 'Previous page', 'twentyseventeen' ) . '</span>',
+				//	'next_text' => '<span class="screen-reader-text">' . __( 'Next page', 'twentyseventeen' ) . '</span>' . twentyseventeen_get_svg( array( 'icon' => 'arrow-right' ) ),
+				//	'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentyseventeen' ) . ' </span>',
+				//) );
 
 			else :
 
@@ -58,10 +68,7 @@ get_header(); ?>
 
 			endif;
 			?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-	<?php get_sidebar(); ?>
-</div><!-- .wrap -->
-
+</div> <!-- close main content -->
+	
+<?php get_sidebar(); ?>
 <?php get_footer();
