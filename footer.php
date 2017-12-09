@@ -7,7 +7,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package WordPress
- * @subpackage x2-feynman
+ * @subpackage Twenty_Seventeen
  * @since 1.0
  * @version 1.2
  */
@@ -17,15 +17,11 @@
 </div><!--/Page Content End -->
 
 <footer class="footer">
-	<div class="container">
-		<p class="pull-right"><a href="#">Back to top</a></p>
-		<p class="text-muted">&copy; 2017 Company, LLC. &middot;</p>
-	</div>
+	<?php
+		get_template_part( 'template-parts/footer/site', 'info' );
+	?>
 </footer>
 
-
-
-<!-- Bootstrap core JavaScript -->
 
 
 

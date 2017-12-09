@@ -7,7 +7,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package WordPress
- * @subpackage x2-feynman
+ * @subpackage Twenty_Seventeen
  * @since 1.0
  * @version 1.0
  */
@@ -39,25 +39,9 @@
 <body <?php body_class(); ?>>
 			
 <!-- Fixed navbar -->
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container">
-	<div class="navbar-header">
-	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-		<span class="sr-only">Toggle navigation</span>
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-	  </button>
-	  <a class="navbar-brand" href="<?php echo get_bloginfo( 'wpurl' ); ?>"><?php echo get_bloginfo( 'name' ); ?></a>
-	</div>
-	<div id="navbar" class="collapse navbar-collapse">
-	  <ul class="nav navbar-nav">
-		<li class="active"><a href="/">Home</a></li>
-		<?php wp_list_pages( '&title_li=' ); ?>
-	  </ul>
-	</div><!--/.nav-collapse -->
-  </div>
-</nav>
+<?php if ( has_nav_menu( 'top' ) ) : ?>
+	<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
+<?php endif; ?>
 
 <div class="container"><!--/Page Content Start -->
 
@@ -65,3 +49,7 @@
 		<h1 class="blog-title"><a href="<?php echo get_bloginfo( 'wpurl' );?>"><?php echo get_bloginfo( 'name' ); ?></a></h1>
 		<p class="lead blog-description"><?php echo get_bloginfo( 'description' ); ?></p>
 	</div>
+
+		
+
+	

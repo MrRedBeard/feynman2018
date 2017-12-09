@@ -1,16 +1,16 @@
 <?php
 /**
- * x2-feynman functions and definitions
+ * Feynman 2018 functions and definitions
  *
- * @link http://www.x2labs.com
+ * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package WordPress
- * @subpackage x2-feynman
+ * @subpackage feynman2018
+ * @since 1.0
  */
- 
- 
- /**
- * x2-feynman only works in WordPress 4.7 or later.
+
+/**
+ * Feynman 2018 only works in WordPress 4.7 or later.
  */
 if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '<' ) )
 {
@@ -21,6 +21,22 @@ if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '<' ) )
 add_theme_support( 'title-tag' );
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'html5', array( 'search-form' ) );
+
+register_nav_menus( array(
+	'top'    => __( 'Top Menu', 'twentyseventeen' ),
+	'social' => __( 'Social Links Menu', 'twentyseventeen' ),
+));
+
+
+
+//Add active menu item class of active
+function special_nav_class ($classes, $item) {
+    if (in_array('current-menu-item', $classes) ){
+        $classes[] = 'active ';
+    }
+    return $classes;
+}
+add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
 
 /**
  * Hide WordPress Updates from all but Admins
@@ -94,3 +110,5 @@ function x2feynman_google_fonts()
 }
 
 add_action('wp_print_styles', 'x2feynman_google_fonts');
+
+require get_parent_theme_file_path( '/inc/btsrpMenuWalker.php' );

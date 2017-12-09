@@ -1,31 +1,30 @@
-=== x2-feynman ===
-Contributors: x2Labs.com
+=== Feynman 2018 ===
+Contributors: X2Labs
 Requires at least: WordPress 4.7
 Tested up to: WordPress 4.7
-Version: 0.0.1
+Version: 0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: bootstrap
+Tags: bootstrap, one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
 
 == Description ==
 
-A simple theme based on the bootstrap framework.
-Simplicity - Nature has a great simplicity and therefore a great beauty - Richard Feynman
+feynman2018
 
-For more information about x2-feynman please go to https://github.com/MrRedBeard/x2-feynman.
+For more information about feynman2018 please go to https://codex.wordpress.org/Twenty_Seventeen.
 
 == Installation ==
 
 1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
-2. Type in x2-feynman in the search form and press the 'Enter' key on your keyboard.
+2. Type in Twenty Seventeen in the search form and press the 'Enter' key on your keyboard.
 3. Click on the 'Activate' button to use your new theme right away.
-4. Go to https://github.com/MrRedBeard/x2-feynman for a guide on how to customize this theme.
+4. Go to https://codex.wordpress.org/Twenty_Seventeen for a guide on how to customize this theme.
 5. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
 == Copyright ==
 
-x2-feynman WordPress Theme, Copyright 2017 x2Labs.com
-x2-feynman is distributed under the terms of the GNU GPL
+Twenty Seventeen WordPress Theme, Copyright 2016 WordPress.org
+Twenty Seventeen is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -37,10 +36,7 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
-x2-feynman bundles the following third-party resources:
-
-Bootstrap
-License MIT, docs CC BY 3.0.
+Twenty Seventeen bundles the following third-party resources:
 
 HTML5 Shiv, Copyright 2014 Alexander Farkas
 Licenses: MIT/GPL2
@@ -58,12 +54,33 @@ Font Awesome icons, Copyright Dave Gandy
 License: SIL Open Font License, version 1.1.
 Source: http://fontawesome.io/
 
+Bundled header image, Copyright Alvin Engler
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://unsplash.com/@englr?photo=bIhpiQA009k
+
 == Changelog ==
 
-= 0.1 =
-* Released: December 15, 2017
+= 1.4 =
+* Released: November 14, 2017
 
-Link to blog entry
-https://github.com/MrRedBeard/x2-feynman
+https://codex.wordpress.org/Twenty_Seventeen_Theme_Changelog#Version_1.4
+
+= 1.3 =
+* Released: June 8, 2017
+
+https://codex.wordpress.org/Twenty_Seventeen_Theme_Changelog#Version_1.3
+
+= 1.2 =
+* Released: April 18, 2017
+
+https://codex.wordpress.org/Twenty_Seventeen_Theme_Changelog#Version_1.2
+
+= 1.1 =
+* Released: January 6, 2017
+
+https://codex.wordpress.org/Twenty_Seventeen_Theme_Changelog#Version_1.1
+
+= 1.0 =
+* Released: December 6, 2016
 
 Initial release
