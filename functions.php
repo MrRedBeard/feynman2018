@@ -27,6 +27,18 @@ register_nav_menus( array(
 	'social' => __( 'Social Links Menu', 'twentyseventeen' ),
 ));
 
+function change_howdy($translated, $text, $domain)
+{
+
+    if (!is_admin() || 'default' != $domain)
+        return $translated;
+
+    if (false !== strpos($translated, 'Howdy'))
+        return str_replace('Howdy', 'Welcome', $translated);
+
+    return $translated;
+}
+add_filter('gettext', 'change_howdy', 10, 3);
 
 
 //Add active menu item class of active
@@ -126,28 +138,29 @@ function feynman2018_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
-
+	
 	register_sidebar( array(
-		'name'          => __( 'Footer 1', 'feynman2018' ),
-		'id'            => 'sidebar-2',
-		'description'   => __( 'Add widgets here to appear in your footer.', 'feynman2018' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
+		'name'          => __( 'Front Page Tile Widgets', 'feynman2018' ),
+		'id'            => 'x2-fptw',
+		'description'	=> 'Only use the Text & Image Widgets. To add text with image use image caption and title',
+		'before_widget' => '<div class="fptw-widget">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="fptw-title">',
 		'after_title'   => '</h2>',
-	) );
-
+	));
+	
 	register_sidebar( array(
-		'name'          => __( 'Footer 2', 'feynman2018' ),
-		'id'            => 'sidebar-3',
-		'description'   => __( 'Add widgets here to appear in your footer.', 'feynman2018' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
+		'name'          => __( 'Full Width Page Footer Widgets', 'feynman2018' ),
+		'id'            => 'x2-ftrw',
+		'description'	=> 'Only use the Text Widgets',
+		'before_widget' => '<div class="ftrw-widget">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2>',
 		'after_title'   => '</h2>',
-	) );
+	));
 }
 add_action( 'widgets_init', 'feynman2018_widgets_init' );
+
 
 
 

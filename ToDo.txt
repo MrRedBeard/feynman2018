@@ -1,0 +1,12 @@
+
+
+File: btsrpMenuWalker.php
+What: Recursive function to get sub sub menu items
+
+File: CSS
+What: ? Give Header & Footer a percentage height so that the basic page height is 100% with no overlap when the page is longer than 100% ?
+
+Need Top Menu, Main Menu and Footer Menu
+
+File: functions.php
+What: Change tile widgets to Bootstrap blocks
